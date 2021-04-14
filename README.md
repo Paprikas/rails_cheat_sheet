@@ -7,7 +7,7 @@
 1. Install docker
 2. Add an alias for docker-compose for ease use
 
-```
+```bash
 echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.bashrc
 
 # For Oh My Zsh
@@ -16,7 +16,7 @@ echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.zshrc
 
 3. Reload your rc file
 
-```
+```bash
 . ~/.bashrc
 
 # For Oh My Zsh
@@ -29,19 +29,27 @@ echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.zshrc
 
 1. Copy and edit `.env` file 
    
-`cp docker_dev/.env_docker.example docker_dev/.env_docker`
+```bash
+cp docker_dev/.env_docker.example docker_dev/.env_docker
+```
 
 2. Build an image 
-   
-`dcdev build`
+
+```bash
+dcdev build
+```
 
 3. Run app 
-   
-`dcdev up`
+
+```bash
+dcdev up
+```
 
 4. Create a database 
-   
-`dcdev run web bundle exec rails db:create`
+
+```bash
+dcdev run web bundle exec rails db:create
+```
 
 ### Regular dev workflow
 
