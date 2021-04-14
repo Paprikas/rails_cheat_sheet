@@ -20,10 +20,13 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['RCS_DATABASE_USERNAME'] %>
+  password: <%= ENV['RCS_DATABASE_PASSWORD'] %>
+  host: <%= ENV.fetch("RCS_DATABASE_HOST") { "localhost" } %>
 
 development:
   <<: *default
-  database: RailsCheatSheet_development
+  database: rails_cheat_sheet_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: RailsCheatSheet_test
+  database: rails_cheat_sheet_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: RailsCheatSheet_production
+  database: rails_cheat_sheet_production
   username: RailsCheatSheet
-  password: <%= ENV['RAILSCHEATSHEET_DATABASE_PASSWORD'] %>
+  password: <%= ENV['RCS_DATABASE_PASSWORD'] %>
