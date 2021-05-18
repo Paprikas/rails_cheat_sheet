@@ -22,3 +22,6 @@ yarn
 
 echo "Starting the foreman..."
 foreman start -f Procfile.docker_dev -p 3000
+# Use just rails
+#echo "Starting the rails..."
+#bundle exec rails s -b '0.0.0.0'
