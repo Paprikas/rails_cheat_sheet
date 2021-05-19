@@ -1,0 +1,8 @@
+# https://github.com/mbj/mutant/blob/master/docs/configuration.md
+---
+includes:
+  - test
+requires:
+  - ./config/environment
+integration: minitest
+fail_fast: true
