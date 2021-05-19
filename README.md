@@ -5,6 +5,7 @@
 ### Prerequisites
 
 1. [Install docker](https://docs.docker.com/get-docker/)
+2. Don't forget [Post-install section (for linux)](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 2. Add an alias for `docker-compose` for ease use
 
 ```bash
@@ -28,33 +29,31 @@ echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.zshrc
 ### First run
 
 1. Copy and edit `.env` file 
-   
+
 ```bash
 cp docker_dev/.env_docker.example docker_dev/.env_docker
 ```
 
-2. Build an image 
+2. Build an image
 
 ```bash
 dcdev build
 ```
 
-3. Run app 
+3. Run app
 
 ```bash
 dcdev up
 ```
 
-4. Create a Database 
+4. Create a Database and run migrations
 
 ```bash
+dcdev run web bundle exec rails db:setup
+# or
 dcdev run web bundle exec rails db:create
-```
-
-5. Run migrations
-
-```bash
-dcdev run web bundle exec rails db:migrate
+dcdev run web bundle exec rails db:schema:load
+dcdev run web bundle exec rails db:seed
 ```
 
 ### Regular dev workflow
