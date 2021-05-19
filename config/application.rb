@@ -20,3 +20,6 @@ module RailsCheatSheet
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+# Workaround for Tailwind CSS https://evilmartians.com/chronicles/set-up-tailwind-css-jit-in-a-rails-project-to-compile-styles-20x-faster
+Webpacker::Compiler.env["TAILWIND_MODE"] = "build"
