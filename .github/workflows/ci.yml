@@ -37,6 +37,8 @@ jobs:
       - name: Yarn install
         run: |
           yarn install
+      - name: Standardrb
+        run: bundle exec standardrb
       - name: Run tests
         env:
           RAILS_ENV: test
