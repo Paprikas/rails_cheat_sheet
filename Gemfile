@@ -36,6 +36,7 @@ group :development, :test do
 
   gem "standard"
   gem "rails_best_practices"
+  gem "reek"
 end
 
 group :development do
