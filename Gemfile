@@ -37,6 +37,7 @@ group :development, :test do
   gem "standard"
   gem "rails_best_practices"
   gem "reek"
+  gem "brakeman"
 end
 
 group :development do
