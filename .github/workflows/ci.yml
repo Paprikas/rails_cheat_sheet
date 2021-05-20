@@ -39,6 +39,8 @@ jobs:
           yarn install
       - name: Standardrb
         run: bundle exec standardrb
+      - name: Rails Best Practices
+        run: bundle exec rails_best_practices
       - name: Run tests
         env:
           RAILS_ENV: test
