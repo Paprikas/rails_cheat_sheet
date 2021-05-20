@@ -1,0 +1,18 @@
+<div class="max-w-2xl mx-auto">
+  <div class="bg-gray-100 px-4 py-6 sm:px-6">
+    <div class="flex">
+      <div class="min-w-4 flex-1">
+        <p><%= notice %></p>
+
+        <h1 class="text-lg font-medium text-gray-900">Tweets</h1>
+
+        <%= render "tweets/form", tweet: @tweet || Tweet.new %>
+
+        <%= turbo_stream_from "tweets" %>
+        <%= turbo_frame_tag "tweets" do %>
+          <%= render(@tweets || Tweet.none) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
