@@ -4,6 +4,11 @@ services:
     image: postgres:latest
     volumes:
       - postgresql_volume:/var/lib/postgresql/data
+    env_file:
+      - ./docker_dev/.env_docker
+    # Debug from local machine
+    ports:
+      - 5333:5432
   redis:
     image: redis:alpine
     volumes:
@@ -14,21 +19,21 @@ services:
     build:
       dockerfile: ./docker_dev/Dockerfile
       context: .
-    command: ./docker_dev/start.sh
     volumes:
       - .:/app
       - bundle_volume:/bundle
       # Used mainly for sshing into servers
       #- $SSH_AUTH_SOCK:/ssh-agent
       #- ~/.ssh/known_hosts:/etc/ssh/ssh_known_hosts
+    env_file:
+      - ./docker_dev/.env_docker
+    command: ./docker_dev/start.sh
     ports:
       - 3000:3000
       # Webpacker
       - 3035:3035
       # Live reloading
       - 35729:35729
-    env_file:
-      - ./docker_dev/.env_docker
     depends_on:
       - postgresql
       - redis
