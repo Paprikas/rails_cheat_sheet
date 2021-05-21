@@ -1,0 +1,20 @@
+{
+  "name": "Rails Cheat Sheet",
+  "description": "This app was made to demonstrate various Rails features",
+  "stack": "heroku-20",
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "heroku-redis:hobby-dev"
+  ],
+  "environments": {
+    "review": {
+      "addons": [
+        "heroku-postgresql:hobby-dev",
+        "heroku-redis:hobby-dev"
+      ],
+      "scripts": {
+        "postdeploy": "bundle exec rails db:seed"
+      }
+    }
+  }
+}
