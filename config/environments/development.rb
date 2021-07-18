@@ -84,6 +84,7 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
+  # Allow access to web_console if running from docker
   if ENV["DOCKER_DEV"]
     config.web_console.whitelisted_ips = Socket.ip_address_list.reduce([]) do |res, addrinfo|
       addrinfo.ipv4? ? res << IPAddr.new(addrinfo.ip_address).mask(24) : res
