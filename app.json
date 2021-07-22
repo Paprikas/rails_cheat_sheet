@@ -1,16 +1,25 @@
 {
   "name": "Rails Cheat Sheet",
   "description": "This app was made to demonstrate various Rails features",
-  "stack": "heroku-20",
   "addons": [
+    "scheduler:standard",
     "heroku-postgresql:hobby-dev",
-    "heroku-redis:hobby-dev"
+    "heroku-redis:hobby-dev",
+    "heroku-redis:hobby-dev",
+    {
+      "as": "REDIS_CACHE"
+    }
   ],
   "environments": {
     "review": {
       "addons": [
+        "scheduler:standard",
         "heroku-postgresql:hobby-dev",
-        "heroku-redis:hobby-dev"
+        "heroku-redis:hobby-dev",
+        "heroku-redis:hobby-dev",
+        {
+          "as": "REDIS_CACHE"
+        }
       ],
       "scripts": {
         "postdeploy": "bundle exec rails db:seed"
