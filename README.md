@@ -62,3 +62,8 @@ dcdev run web bundle exec rails db:seed
 2. To run any Rails related command, just shell `dcdev run web bash` and execute anything you want inside container.
 3. You can use or add any aliases you want, see `docker_dev/Dockerfile`. Don't forget to rebuild an image: Run `dcdev down` to stop everything and `dcdev build` to rebuild
 4. You might have an issues on Linux OS with permissions on files that created by Docker. Just run chown `sudo chown -R YOUR_USER:YOUR_GROUP .`
+
+### Debugging
+
+1. Place `binding.pry` or any other debugger in a place you need
+2. Run `docker attach CONTAINER_NAME_web_1` to access console (Note that there might be some issues, see https://github.com/docker/compose/issues/423#issuecomment-141995398)
