@@ -70,3 +70,4 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "rexml" # Not included in Ruby anymore since 3rd version
 
 gem "hotwire-rails", "~> 0.1.3"
+gem "sidekiq"
