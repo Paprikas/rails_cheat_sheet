@@ -5,8 +5,9 @@
 ### Prerequisites
 
 1. [Install docker](https://docs.docker.com/get-docker/)
-2. Don't forget [Post-install section (for linux)](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
-2. Add an alias for `docker-compose` for ease use
+2. [Install docker-compose](https://docs.docker.com/compose/install/)
+3. Don't forget [Post-install section (for linux)](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+4. Add an alias for `docker-compose` for ease use
 
 ```bash
 echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.bashrc
