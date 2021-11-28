@@ -16,7 +16,7 @@ echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.bashrc
 echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.zshrc
 ```
 
-3. Reload your rc file
+5. Reload your rc file
 
 ```bash
 . ~/.bashrc
@@ -25,7 +25,7 @@ echo "alias dcdev='docker-compose -f docker-compose-dev.yml'" >> ~/.zshrc
 . ~/.zshrc
 ```
 
-4. For Redis, add `vm.overcommit_memory = 1` to your `/etc/sysctl.conf`
+6. For Redis, add `vm.overcommit_memory = 1` to your `/etc/sysctl.conf`
 
 ### First run
 
