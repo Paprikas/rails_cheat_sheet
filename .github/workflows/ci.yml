@@ -34,9 +34,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-      - name: Yarn install
-        run: |
-          yarn install
       - name: Standardrb
         run: bundle exec standardrb
       - name: Rails Best Practices
@@ -52,4 +49,5 @@ jobs:
           DATABASE_URL: postgres://postgres:password@localhost:5432/rails_cheat_sheet_test
         run: |
           bundle exec rails db:test:prepare
+          bundle exec rails test:prepare
           bundle exec rails test
