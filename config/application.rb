@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module RailsCheatSheet
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -20,6 +20,3 @@ module RailsCheatSheet
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
-
-# Workaround for Tailwind CSS https://evilmartians.com/chronicles/set-up-tailwind-css-jit-in-a-rails-project-to-compile-styles-20x-faster
-Webpacker::Compiler.env["TAILWIND_MODE"] = "build"
