@@ -5,7 +5,7 @@ source "https://oss:Wr4KQLBuQ4tnHpXEgxSHZ6YyWqM3NCAu@gem.mutant.dev" do
   gem "mutant-license"
 end
 
-ruby "~> 3.0.0"
+ruby "~> 3.1.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
