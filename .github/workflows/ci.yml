@@ -51,3 +51,8 @@ jobs:
           bundle exec rails db:test:prepare
           bundle exec rails test:prepare
           bundle exec rails test
+      - name: Upload Code Coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage
+          path: coverage/
