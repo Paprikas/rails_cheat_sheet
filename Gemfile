@@ -77,6 +77,7 @@ group :development do
 
   gem "bullet"
   gem "annotate"
+  gem "simplecov", require: false
 end
 
 group :test do
