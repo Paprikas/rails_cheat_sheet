@@ -21,7 +21,7 @@ jobs:
         ports: ['6379:6379']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Ruby
       # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
       # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -56,3 +56,14 @@ jobs:
         with:
           name: code-coverage
           path: coverage/
+      - name: Upload Screenshots
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: screenshots
+          path: tmp/screenshots/
+      - name: Upload deprecation warnings
+        uses: actions/upload-artifact@v3
+        with:
+          name: deprecations
+          path: spec/deprecations/
