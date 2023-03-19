@@ -133,6 +133,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.1)
     minitest (5.16.2)
     msgpack (1.5.4)
     mutant (0.11.14)
@@ -159,7 +160,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8-x86_64-linux)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.1)
@@ -275,6 +277,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2022.7)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.2.0)
     uniform_notifier (1.16.0)
     unparser (0.6.5)
@@ -332,7 +336,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.0p0
 
 BUNDLED WITH
-   2.3.7
+   2.4.1
