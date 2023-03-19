@@ -92,3 +92,4 @@ end
 gem "rexml" # Not included in Ruby anymore since 3rd version
 
 gem "sidekiq" # Background worker
+gem "ruby-openai" # OpenAI API

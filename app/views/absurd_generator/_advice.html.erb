@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "advice" do %>
+  <% if @advice %>
+    <div class="mb-4 mt-6 p-4 bg-green-100 border border-green-300 rounded">
+      <%= @advice %>
+    </div>
+  <% end %>
+<% end %>
